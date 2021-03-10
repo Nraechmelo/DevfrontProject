@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Nraechmelo/DevfrontProject#readme",
   "devDependencies": {
-    "parcel": "^1.12.4"
+    "parcel": "^1.12.4",
+    "sass": "^1.32.8"
   }
 }
