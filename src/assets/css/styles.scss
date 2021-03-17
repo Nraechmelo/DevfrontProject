@@ -1,13 +1,196 @@
-@import 'reset';
+// @import 'reset';
+// @import 'presentation';
+
+// RESET CSS
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// NOUVEAU CSS
 
 * {
-    box-sizing: border-box;
-  }
-  
-  img {
-    max-width: 100%;
-  }
-  body {
-    background-color: #F4C8C8;
-    font-family: 'Oswald', sans-serif;
-  }
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: #f4c8c8;
+  font-family: "Oswald", sans-serif;
+  margin: 1vh;
+}
+.presentation--hook {
+  font-size: 3em;
+  color: grey;
+  text-align: center;
+}
+.presentation--illustration {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.presentation--survey {
+  background-color: #b0f2ec;
+  text-align: center;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin-top: 2vh;
+}
+.presentation--survey--answer {
+  font-size: 3em;
+  color: grey;
+}
+.presentation--survey--complete {
+  font-size: 1.2em;
+  color: grey;
+}
+.presentation--offer {
+  text-align: center;
+}
+.presentation--offer--product {
+  display: block;
+  font-size: 5em;
+  padding-bottom: 1vh;
+}
+.presentation--offer__claim {
+  font-size: 1.2em;
+}
+.presentation--offer--price {
+  display: block;
+  font-size: 3em;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
+}
+
+.advantages {
+  background-color: #2a2626;
+}
+.advantage:nth-child(even) {
+  background-color: #b0f2ec;
+}
+.advantage:nth-child(odd) {
+  background-color: #f4c8c8;
+}
