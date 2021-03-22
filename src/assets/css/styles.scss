@@ -140,12 +140,31 @@ img {
 body {
   background-color: #f4c8c8;
   font-family: "Oswald", sans-serif;
-  margin: 1vh;
 }
-.presentation--hook {
+
+.menu--list {
+  height: 8vh;
+  width: 100%;
+  position: fixed;
+  top: 0vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+.menu__link {
+  text-decoration: none;
+  color: purple;
+}
+.content {
+  margin-top: 8vh;
+}
+.presentation--tagline {
   font-size: 3em;
   color: grey;
   text-align: center;
+  margin-bottom: 2vh;
 }
 .presentation--illustration {
   display: block;
@@ -155,28 +174,31 @@ body {
 .presentation--survey {
   background-color: #b0f2ec;
   text-align: center;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
-  margin-top: 2vh;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
 }
 .presentation--survey--answer {
   font-size: 3em;
   color: grey;
+  padding-bottom: 2vh;
 }
 .presentation--survey--complete {
   font-size: 1.2em;
+  padding-bottom: 4vh;
   color: grey;
 }
 .presentation--offer {
   text-align: center;
+  padding-top: 3vh;
 }
 .presentation--offer--product {
   display: block;
   font-size: 5em;
-  padding-bottom: 1vh;
+  padding-bottom: 2vh;
 }
 .presentation--offer__claim {
   font-size: 1.2em;
+  padding-bottom: 2vh;
 }
 .presentation--offer--price {
   display: block;
@@ -188,9 +210,56 @@ body {
 .advantages {
   background-color: #2a2626;
 }
+.advantages--tagline {
+  font-size: 2em;
+  color: red;
+  text-align: center;
+  padding-top: 2vh;
+  margin-bottom: 2vh;
+}
+.advantage {
+  width: 75%;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 2vw;
+  padding-right: 1vw;
+}
 .advantage:nth-child(even) {
   background-color: #b0f2ec;
+  margin-left: 25%;
 }
 .advantage:nth-child(odd) {
   background-color: #f4c8c8;
+}
+.doubts--tagline {
+  font-size: 3em;
+  color: gery;
+  text-align: center;
+  padding-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.doubts--tagline span {
+  color: red;
+}
+
+.doubts__explanation {
+  font-size: 1.2em;
+  text-align: center;
+  padding-bottom: 2vh;
+}
+.doubt {
+  width: 75%;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 2vw;
+  padding-right: 1vw;
+}
+.doubt:nth-child(even) {
+  background-color: #b0f2ec;
+  margin-left: 25%;
+}
+.doubt:nth-child(odd) {
+  background-color: #2a2626;
+  color: #b0f2ec;
 }

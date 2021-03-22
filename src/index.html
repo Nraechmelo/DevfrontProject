@@ -13,16 +13,16 @@
 
 <body>
 
-    <nav>
-        <ul>
-            <li>The Lazter</li>
-            <li>C'est fou !'</li>
-            <li>Témoignages</li>
+    <nav class="menu">
+        <ul class="menu--list">
+            <li> <a href="#section1" class="menu__link"> The Lazter</a></li>
+            <li><a href="#section2" class="menu__link">C'est fou !</a></li>
+            <li><a href=".witnesses" class="menu__link">Témoignages</a></li>
         </ul>
     </nav>
-    <main>
-        <section class="presentation">
-            <h1 class="presentation--hook">Qui aime mettre ses mains dans une litière de chat?</h1>
+    <main class="content">
+        <section id="section1" class="presentation">
+            <h1 class="presentation--tagline">Qui aime mettre ses mains dans une litière de chat?</h1>
             <img src="./assets/img/chat.jpg" alt="surprised cat" class="presentation--illustration">
             <div class="presentation--survey">
                 <p class="presentation--survey--answer">Personne !</p>
@@ -40,8 +40,8 @@
                 <img src=" ./assets/img/litiere.jpg" alt="The Lazter">
             </div>
         </section>
-        <section class="advantages">
-            <h2>Des avantages incroyables</h2>
+        <section id="section2" class="advantages">
+            <h2 class="advantages--tagline">Des avantages incroyables !!</h2>
             <div class="advantage">
                 <h3>Des technologies incroyables dans votre salon !</h3>
                 <p>Les composants utilisés pour VOTRE LAZTER sont les mêmes que ceux utilisés dans les toilettes du
@@ -62,8 +62,10 @@
             </div>
         </section>
         <section class="doubts">
-            <h1>Vous avez des <span>doutes</span>? Vous trouvez notre produit <span>trop cher</span>?</h1>
-            <p>Votre réaction, quoique absurde, peut se comprendre. Nos équipes de neurologues ont identifié chez vous
+            <h1 class="doubts--tagline">Vous avez des <span>doutes</span>? Vous trouvez notre produit <span>trop
+                    cher</span>?</h1>
+            <p class="doubts__explanation">Votre réaction, quoique absurde, peut se comprendre. Nos équipes de
+                neurologues ont identifié chez vous
                 trois anomalies possibles. </p>
             <div class="doubt">
                 <h3>Vous êtes radin.</h3>
