@@ -195,6 +195,21 @@ body {
   display: block;
   font-size: 5em;
   padding-bottom: 2vh;
+  animation-duration: 0.8s;
+  animation-name: flash;
+  animation-iteration-count: infinite;
+  transition: none;
+}
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .presentation--offer__claim {
   font-size: 1.2em;
@@ -206,7 +221,9 @@ body {
   padding-bottom: 1vh;
   padding-top: 1vh;
 }
-
+.presentation--offer__illu {
+  width: 50%;
+}
 .advantages {
   background-color: #2a2626;
 }
@@ -262,4 +279,50 @@ body {
 .doubt:nth-child(odd) {
   background-color: #2a2626;
   color: #b0f2ec;
+}
+.exhort {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  font-size: 3em;
+  text-align: center;
+}
+.exhort__emphasize {
+  color: purple;
+}
+.witness--title {
+  text-align: center;
+  font-size: 1.4em;
+  font-style: italic;
+}
+.witness {
+  border-bottom: 1px solid black;
+  padding-bottom: 2vh;
+  padding-top: 1vh;
+  padding-left: 1vw;
+}
+.witness__name {
+  font-size: 1.5em;
+  color: #b0f2ec;
+  text-shadow: 0 0 3px purple;
+}
+@media screen and (min-width: 813px) {
+  .presentation--tagline {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    font-size: 4em;
+  }
+  .presentation--md {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .presentation--illustration {
+    display: inline-block;
+    width: 100%;
+  }
+  .presentation--survey {
+    display: inline-block;
+    height: 100%;
+    padding: 0;
+    padding-top: 20%;
+  }
 }
