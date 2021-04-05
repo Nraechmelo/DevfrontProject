@@ -141,6 +141,7 @@ body {
   background-color: #f4c8c8;
   font-family: "Oswald", sans-serif;
 }
+//////////:::::::::: menu :::::::::://////////
 
 .menu--list {
   height: 8vh;
@@ -156,6 +157,11 @@ body {
 .menu__link {
   text-decoration: none;
   color: purple;
+}
+@media screen and (min-width: 813px) {
+  .menu--list {
+    box-shadow: 0vh 1vh 6px #555;
+  }
 }
 .content {
   margin-top: 8vh;
@@ -203,12 +209,15 @@ body {
 @keyframes flash {
   0% {
     opacity: 1;
+    color: #b0f2ec;
   }
   40% {
     opacity: 0;
+    color: red;
   }
   100% {
     opacity: 1;
+    color: black;
   }
 }
 .presentation--offer__claim {
@@ -223,6 +232,14 @@ body {
 }
 .presentation--offer__illu {
   width: 50%;
+}
+@media screen and (min-width: 813px) {
+  .presentation--offer {
+    font-size: 2em;
+  }
+  .presentation--offer--price {
+    font-size: 3em;
+  }
 }
 .advantages {
   background-color: #2a2626;
@@ -247,6 +264,46 @@ body {
 }
 .advantage:nth-child(odd) {
   background-color: #f4c8c8;
+}
+@media screen and (min-width: 813px) {
+  .advantages {
+    display: grid;
+    padding-bottom: 3vh;
+    grid-template-columns: repeat(3, 33%);
+  }
+  .advantages--tagline {
+    grid-column: 1 / span 3;
+    padding-bottom: 3vh;
+    padding-top: 3vh;
+  }
+  .advantage {
+    width: 90%;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin-left: 5%;
+    margin-right: 5%;
+    min-height: 45vh;
+    text-align: center;
+    font-size: 1.4em;
+  }
+  .advantage__tagline {
+    font-size: 1.8em;
+    padding-bottom: 2vh;
+  }
+  .advantage:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 5%;
+  }
+  .advantage:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .advantage:nth-child(4) {
+    grid-column: 3;
+    grid-row: 2;
+    margin-left: 5%;
+  }
 }
 .doubts--tagline {
   font-size: 3em;
@@ -279,6 +336,52 @@ body {
 .doubt:nth-child(odd) {
   background-color: #2a2626;
   color: #b0f2ec;
+}
+@media screen and (min-width: 813px) {
+  .doubts {
+    display: grid;
+    padding-bottom: 3vh;
+    grid-template-columns: repeat(3, 33%);
+  }
+  .doubts--tagline {
+    grid-column: 1 / span 3;
+    padding-bottom: 3vh;
+    padding-top: 3vh;
+  }
+  .doubt__tagline {
+    font-size: 1.8em;
+    padding-bottom: 2vh;
+  }
+  .doubts__explanation {
+    grid-column: 1 / span 3;
+    padding-bottom: 3vh;
+    padding-top: 3vh;
+    grid-row: 2;
+  }
+  .doubt {
+    width: 90%;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin-left: 5%;
+    margin-right: 5%;
+    min-height: 45vh;
+    text-align: center;
+    font-size: 1.4em;
+  }
+  .doubt:nth-child(5) {
+    grid-column: 3;
+    grid-row: 3;
+    margin-left: 5%;
+  }
+  .doubt:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .doubt:nth-child(4) {
+    grid-column: 2;
+    grid-row: 3;
+    margin-left: 5%;
+  }
 }
 .exhort {
   padding-top: 2vh;
