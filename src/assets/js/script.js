@@ -15,3 +15,10 @@ function openMoadl() {
 function closeModal() {
     overlay.style.display='none';
 }
+function checkPopup(){
+    if (alreadyseen==false) {
+        overlay.style.display='block';
+        alreadyseen = true;
+        }
+}
+window.setTimeout(checkPopup,10000);
