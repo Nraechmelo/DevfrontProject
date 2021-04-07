@@ -1,133 +1,4 @@
-// @import 'reset';
-// @import 'presentation';
-
-// RESET CSS
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-// NOUVEAU CSS
+//::::::::::::::::::::::::::::::::CSS GENERAL:::::::::::::::::::::::::::::::://
 
 * {
   box-sizing: border-box;
@@ -141,12 +12,16 @@ body {
   background-color: #f4c8c8;
   font-family: "Oswald", sans-serif;
 }
-//////////:::::::::: menu :::::::::://////////
+.content {
+  margin-top: 8vh;
+}
+//:::::::::::::::::::::::::::::::: MENU :::::::::::::::::::::::::::::::://
 
 .menu--list {
   height: 8vh;
   width: 100%;
   position: fixed;
+  z-index: 999;
   top: 0vh;
   display: flex;
   flex-direction: row;
@@ -163,9 +38,7 @@ body {
     box-shadow: 0vh 1vh 6px #555;
   }
 }
-.content {
-  margin-top: 8vh;
-}
+//:::::::::::::::::::::::::::::::: SECTION 1 : PRESENTATION :::::::::::::::::::::::::::::::://
 .presentation--tagline {
   font-size: 3em;
   color: grey;
@@ -241,8 +114,12 @@ body {
     font-size: 3em;
   }
 }
+
+//:::::::::::::::::::::::::::::::: SECTION 2 : AVANTAGES :::::::::::::::::::::::::::::::://
 .advantages {
   background-color: #2a2626;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 .advantages--tagline {
   font-size: 2em;
@@ -250,33 +127,44 @@ body {
   text-align: center;
   padding-top: 2vh;
   margin-bottom: 2vh;
+  grid-column: 1 / span 3;
 }
-.advantage {
-  width: 75%;
+.advantage,
+.doubt {
   padding-top: 2vh;
   padding-bottom: 2vh;
   padding-left: 2vw;
   padding-right: 1vw;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
+.advantage__tagline {
+  font-size: 1.5em;
+  padding-bottom: 2vh;
+  text-align: center;
+}
+
 .advantage:nth-child(even) {
   background-color: #b0f2ec;
-  margin-left: 25%;
+  grid-column: 1 / span 2;
 }
 .advantage:nth-child(odd) {
   background-color: #f4c8c8;
+  grid-column: 2 / span 2;
 }
 @media screen and (min-width: 813px) {
   .advantages {
-    display: grid;
     padding-bottom: 3vh;
     grid-template-columns: repeat(3, 33%);
   }
   .advantages--tagline {
-    grid-column: 1 / span 3;
     padding-bottom: 3vh;
     padding-top: 3vh;
   }
-  .advantage {
+  .advantage,
+  .doubt {
     width: 90%;
     padding-top: 2vh;
     padding-bottom: 2vh;
@@ -285,10 +173,13 @@ body {
     min-height: 45vh;
     text-align: center;
     font-size: 1.4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .advantage__tagline {
     font-size: 1.8em;
-    padding-bottom: 2vh;
+    // padding-bottom: 2vh;
   }
   .advantage:nth-child(2) {
     grid-column: 1;
@@ -305,12 +196,19 @@ body {
     margin-left: 5%;
   }
 }
+
+//:::::::::::::::::::::::::::::::: SECTION 3 : DOUTES :::::::::::::::::::::::::::::::://
+.doubts {
+  background-color: #f4c8c8;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
 .doubts--tagline {
   font-size: 3em;
-  color: gery;
   text-align: center;
   padding-top: 2vh;
   margin-bottom: 2vh;
+  grid-column: 1 / span 3;
 }
 
 .doubts--tagline span {
@@ -321,22 +219,27 @@ body {
   font-size: 1.2em;
   text-align: center;
   padding-bottom: 2vh;
+  grid-column: 1 / span 3;
 }
 .doubt {
-  width: 75%;
-  padding-top: 2vh;
+  text-align: center;
+}
+.doubt__tagline {
+  font-size: 1.5em;
   padding-bottom: 2vh;
-  padding-left: 2vw;
-  padding-right: 1vw;
+  text-align: center;
 }
 .doubt:nth-child(even) {
   background-color: #b0f2ec;
-  margin-left: 25%;
+  grid-column: 1 / span 2;
 }
+
 .doubt:nth-child(odd) {
   background-color: #2a2626;
   color: #b0f2ec;
+  grid-column: 2 / span 2;
 }
+
 @media screen and (min-width: 813px) {
   .doubts {
     display: grid;
@@ -358,16 +261,7 @@ body {
     padding-top: 3vh;
     grid-row: 2;
   }
-  .doubt {
-    width: 90%;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    margin-left: 5%;
-    margin-right: 5%;
-    min-height: 45vh;
-    text-align: center;
-    font-size: 1.4em;
-  }
+
   .doubt:nth-child(5) {
     grid-column: 3;
     grid-row: 3;
@@ -383,6 +277,7 @@ body {
     margin-left: 5%;
   }
 }
+//:::::::::::::::::::::::::::::::: SECTION 4 : EXHORT ET TEMOIGNAGES  :::::::::::::::::::::::::::::::://
 .exhort {
   padding-top: 2vh;
   padding-bottom: 2vh;
